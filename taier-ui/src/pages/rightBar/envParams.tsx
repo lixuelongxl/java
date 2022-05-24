@@ -16,33 +16,22 @@
  * limitations under the License.
  */
 
-import Editor from '../editor';
-import type { IEditor, IEditorTab } from '@dtinsight/molecule/esm/model';
-import { isTaskTab } from '@/utils/enums';
+import molecule from '@dtinsight/molecule';
+import Editor from '@/components/editor';
+import type { IRightBarComponentProps } from '@/services/rightBarService';
 
-interface IEnvParams extends Pick<IEditor, 'current'> {
-	onChange?: (tab: IEditorTab, value: string) => void;
-}
-
-export default function EnvParams({ current, onChange }: IEnvParams) {
+export default function EnvParams({ current }: IRightBarComponentProps) {
 	const handleValueChanged = (value: string) => {
 		if (current?.tab) {
-			onChange?.(current?.tab, value);
+			molecule.editor.updateTab({
+				...current!.tab!,
+				data: {
+					...current!.tab!.data,
+					taskParams: value,
+				},
+			});
 		}
 	};
-
-	if (!isTaskTab(current?.tab?.id)) {
-		return (
-			<div
-				style={{
-					marginTop: 10,
-					textAlign: 'center',
-				}}
-			>
-				无法获取环境参数
-			</div>
-		);
-	}
 
 	return (
 		<Editor
