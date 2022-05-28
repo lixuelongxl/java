@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:1.22
 
 # 作者
 MAINTAINER dazhi <dazhi@dtstack.com>
