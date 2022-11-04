@@ -46,7 +46,7 @@
 		"react-router-dom": "^6.0.2",
 		"reflect-metadata": "^0.1.13",
 		"tsyringe": "^4.6.0",
-		"umi": "^3.5.20",
+		"umi": "^4.0.0",
 		"whatwg-fetch": "^3.6.2"
 	},
 	"devDependencies": {
