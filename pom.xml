@@ -9,7 +9,7 @@
     <name>taier</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <zookeeper.version>3.4.6</zookeeper.version>
+        <zookeeper.version>3.7.2</zookeeper.version>
         <hadoop.version>2.7.3</hadoop.version>
         <hadoop2.version>2.7.3</hadoop2.version>
         <hadoop3.version>3.0.0</hadoop3.version>
