@@ -31,7 +31,7 @@
 		"classnames": "^2.3.1",
 		"copy-to-clipboard": "^3.3.1",
 		"d3-selection": "1.1.0",
-		"echarts": "3.8.5",
+		"echarts": "5.5.1",
 		"handsontable": "^11.1.0",
 		"lodash": "^4.17.21",
 		"moment": "^2.29.1",
