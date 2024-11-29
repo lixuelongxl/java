@@ -60,7 +60,7 @@
         <dependency>
             <groupId>org.apache.calcite</groupId>
             <artifactId>calcite-core</artifactId>
-            <version>1.19.0</version>
+            <version>1.31.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.calcite/calcite-server -->
@@ -136,28 +136,22 @@
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>reference.conf</resource>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/spring.handlers</resource>
                                 </transformer>
-                                <transformer
-                                        implementation="org.springframework.boot.maven.PropertiesMergingResourceTransformer">
+                                <transformer implementation="org.springframework.boot.maven.PropertiesMergingResourceTransformer">
                                     <resource>META-INF/spring.factories</resource>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/spring.schemas</resource>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>reference.conf</resource>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/services/org.apache.hadoop.security.SecurityInfo</resource>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/services/org.apache.hadoop.fs.FileSystem</resource>
                                 </transformer>
                             </transformers>
@@ -190,14 +184,10 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <copy file="${basedir}/target/${project.name}-${project.version}.jar"
-                                      tofile="${basedir}/target/${project.name}-with-dependencies.jar"/>
-                                <move todir="${basedir}/../lib/"
-                                      file="${basedir}/target/${project.name}-with-dependencies.jar"/>
+                                <copy file="${basedir}/target/${project.name}-${project.version}.jar" tofile="${basedir}/target/${project.name}-with-dependencies.jar"/>
+                                <move todir="${basedir}/../lib/" file="${basedir}/target/${project.name}-with-dependencies.jar"/>
                                 <delete>
-                                    <fileset dir="${basedir}/../lib/"
-                                             includes="${project.name}-*.jar"
-                                             excludes="${project.name}-with-dependencies.jar"/>
+                                    <fileset dir="${basedir}/../lib/" includes="${project.name}-*.jar" excludes="${project.name}-with-dependencies.jar"/>
                                 </delete>
                             </tasks>
                         </configuration>
