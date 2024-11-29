@@ -15,7 +15,7 @@
         <hadoop2.version>2.7.3</hadoop2.version>
         <hadoop3.version>3.0.0</hadoop3.version>
         <spring.version>5.2.3.RELEASE</spring.version>
-        <jackson.version>2.9.6</jackson.version>
+        <jackson.version>2.15.0</jackson.version>
         <common.version>1.0.0</common.version>
     </properties>
 
