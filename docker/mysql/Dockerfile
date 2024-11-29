@@ -1,5 +1,5 @@
 # 构建mysql 从5.7.37 版本开始
-FROM mysql:5.7.37-oracle
+FROM mysql:5.7-oracle
 
 # 作者
 MAINTAINER dazhi <dazhi@dtstack.com>
